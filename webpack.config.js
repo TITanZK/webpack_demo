@@ -10,6 +10,14 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         title: 'FH - 芳华',
         template: "src/assets/index.html"
-    })]
+    })],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
 }
 
